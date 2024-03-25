@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+	<!-- Home Design -->
+
+	<!-- Inner Page Breadcrumb -->
+	<section class="inner_page_breadcrumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 offset-xl-3 text-center">
+					<div class="breadcrumb_content">
+						<h4 class="breadcrumb_title">Event Sıngle</h4>
+						<ol class="breadcrumb">
+						    <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
+						    <li class="breadcrumb-item active" aria-current="page">Event Sıngle</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Blog Post Content -->
+	<section class="blog_post_container">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-xl-9">
+					<div class="main_blog_post_content">
+						<div class="mbp_thumb_post">
+							<div class="details pt0">
+								<h3 class="mb25">{{event.title}}</h3>
+							</div>
+							<div class="thumb">
+								<img class="img-fluid" src="{{event.image.url}}" style="width:100%;height:500px;" alt="12.jpg">
+								<div class="post_date"><h2>{{event.date|date:'d'}}</h2> <span>{{event.date|date:'F'}}</span></div>
+							</div>
+							<div class="details">
+								<p>{{event.description|safe}}</p>
+							</div>
+							
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-lg-4 col-xl-3 pl10 pr10">
+					<div class="main_blog_post_widget_list">
+						<div class="event_details_widget">
+							<h4 class="title">Event Details</h4>
+							<ul>
+								<li><span class="flaticon-appointment"></span> Date: {{event.date}}</li>
+								<li><span class="flaticon-clock"></span> Time: {{event.time}}</li>
+								<li><span class="flaticon-placeholder"></span> Address: {{event.location}}</li>
+							</ul>
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+	{% endblock %}

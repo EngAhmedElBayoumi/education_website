@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+	<!-- Home Design -->
+
+	<!-- Inner Page Breadcrumb -->
+	<section class="inner_page_breadcrumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 offset-xl-3 text-center">
+					<div class="breadcrumb_content">
+						<h4 class="breadcrumb_title">Blog</h4>
+						<ol class="breadcrumb">
+						    <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
+						    <li class="breadcrumb-item active" aria-current="page">Blog</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Blog Post Content -->
+	<section class="blog_post_container">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 pl10 pr10">
+					<div class="main_blog_post_widget_list">
+						<div class="blog_search_widget">
+							<div class="input-group mb-3">
+								<input type="text" class="form-control" placeholder="Search Here" aria-label="Recipient's username" aria-describedby="button-addon2">
+								<div class="input-group-append">
+							    	<button class="btn btn-outline-secondary" type="button" id="button-addon2"><span class="flaticon-magnifying-glass"></span></button>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="main_blog_post_content">
+						<div class="row">
+							{% for blog in blogs %}
+							<div class="col-3">
+								<div class="">
+									<a href="{% url 'blog:blog_detail' blog.id %}">
+										
+									<div class="" style="width:100%;">
+										<img class="" style="width:100%;" src="{{blog.image.url}}" alt="bg1.jpg">
+	
+									</div>
+									<div class="details">
+										<h3>{{blog.title}}</h3>
+										
+										<p>{{blog.short_description|slice:":100"}}</p>
+									</div>
+									</a>
+								</div>
+							</div>
+							{% endfor %}
+							
+						</div>
+					
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+	{% endblock %}

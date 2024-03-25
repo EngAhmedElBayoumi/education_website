@@ -1,0 +1,409 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+	<!-- Home Design -->
+	<div class="home-fourteen bg-img12">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 offset-lg-3">
+					<div class="home-text home12 text-center">
+						<h2 class="title color-white">Learn At Your Own Pace</h2>
+						<p class="para mb20">Technology is bringing a massive wave of evolution on learning <br> things in different ways.</p>
+						<a class="btn rounded home14_btn mr10" href="#">Get Started</a>
+						<a class="btn rounded home14_btn2" href="{% url 'courses:courses' %}">Vıew Courses</a>
+					</div>
+				</div>
+				<div class="col-lg-8 offset-lg-2">
+					<div class="home_vector_img home14">
+						<img src="{% static 'images/background/5.png' %}" alt="PNGImg">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Our Newslatters -->
+	<section id="our-newslatters" class="our-newslatters">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-lg-3">
+					<div class="home_icon_box home6 style2 text-center">
+						<div class="icon"><span class="flaticon-student"></span></div>
+						<p>Learn From The Experts</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<div class="home_icon_box home6 style2 text-center">
+						<div class="icon"><span class="flaticon-book"></span></div>
+						<p>Book Library & Store</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<div class="home_icon_box home6 style2 text-center">
+						<div class="icon"><span class="flaticon-global"></span></div>
+						<p>Worldwide Recognize</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<div class="home_icon_box home6 style2 text-center">
+						<div class="icon"><span class="flaticon-first"></span></div>
+						<p>Best Industry Leaders</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- School Category Courses -->
+	<section id="our-courses" class="our-courses pt90 pt650-992">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 offset-lg-3">
+					<div class="main-title text-center">
+						<h3 class="mt0">Via college Categories Courses</h3>
+						<p>	watch your courses in any time and in any place which time you want </p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-lg-3">
+					<div class="img_hvr_box" style="background-image: url({% static 'images/courses/1.jpg' %});">
+						<div class="overlay">
+							<div class="details">
+								<h5>Design</h5>
+								<p>Over 800 Courses</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<div class="img_hvr_box" style="background-image: url({% static 'images/courses/2.jpg' %});">
+						<div class="overlay">
+							<div class="details">
+								<h5>Business</h5>
+								<p>Over 1,400 Courses</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<div class="img_hvr_box" style="background-image: url({% static 'images/courses/3.jpg' %});">
+						<div class="overlay">
+							<div class="details">
+								<h5>Software Development</h5>
+								<p>Over 350 Courses</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<div class="img_hvr_box" style="background-image: url({% static 'images/courses/4.jpg' %});">
+						<div class="overlay">
+							<div class="details">
+								<h5>Web Development</h5>
+								<p>Over 640 Courses</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<div class="img_hvr_box" style="background-image: url({% static 'images/courses/5.jpg' %});">
+						<div class="overlay">
+							<div class="details">
+								<h5>Photography</h5>
+								<p>Over 740 Courses</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<div class="img_hvr_box" style="background-image: url({% static 'images/courses/6.jpg' %});">
+						<div class="overlay">
+							<div class="details">
+								<h5>Audio + Music</h5>
+								<p>Over 120 Courses</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<div class="img_hvr_box" style="background-image: url({% static 'images/courses/7.jpg' %});">
+						<div class="overlay">
+							<div class="details">
+								<h5>Marketing</h5>
+								<p>Over 200 Courses</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<div class="img_hvr_box" style="background-image: url({% static 'images/courses/8.jpg' %});">
+						<div class="overlay">
+							<div class="details">
+								<h5>3D + Animation</h5>
+								<p>Over 900 Courses</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 offset-lg-3">
+					<div class="text-center mt25">
+						<a class="btn btn-thm5" href="#">View All Courses</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Top Courses -->
+	<section id="top-courses" class="top-courses home14 pb30">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 offset-lg-3">
+					<div class="main-title text-center">
+						<h3 class="mt0 mb0">Browse Our Top Courses</h3>
+						<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+			 	<div class="col-lg-12">
+			 		<div id="options" class="alpha-pag full home14">
+						<div class="option-isotop">
+							<ul id="filter" class="option-set" data-option-key="filter">
+								<li class="list-inline-item"><a href="#all" data-option-value="*" class="selected">Developer</a></li>
+								<li class="list-inline-item"><a href="#business" data-option-value=".business">Business</a></li>
+								<li class="list-inline-item"><a href="#design" data-option-value=".design">Design</a></li>
+								<li class="list-inline-item"><a href="#web" data-option-value=".web">Web</a></li>
+								<li class="list-inline-item"><a href="#marketing" data-option-value=".marketing">Marketing</a></li>
+							</ul>
+						</div>
+					</div><!-- FILTER BUTTONS -->
+			 		<div class="emply-text-sec">
+			 			<div class="row" id="masonry_abc">
+			 				<div class="col-lg-6 col-xl-6 business design">
+								<div class="top_courses home14">
+									<div class="thumb">
+										<img class="img-whp" src="{% static 'images/courses/t1.jpg' %}" alt="t1.jpg">
+										<div class="overlay">
+											
+											
+											<a class="tc_preview_course" href="#">Preview Course</a>
+										</div>
+									</div>
+									<div class="details">
+										<div class="tc_content">
+											<p>Ali TUFAN</p>
+											<h5>Introduction Web Design with HTML</h5>
+											
+										</div>
+										<div class="tc_footer">
+											<ul class="tc_meta float-left">
+												<li class="list-inline-item"><a href="#"><i class="flaticon-profile"></i></a></li>
+												<li class="list-inline-item"><a href="#">1st year</a></li>
+												<li class="list-inline-item"><a href="#"><i class="flaticon-part"></i></a></li>
+												<li class="list-inline-item"><a href="#">computer</a></li>
+											</ul>
+											
+										</div>
+									</div>
+								</div>
+			 				</div>
+			 				<div class="col-lg-6 col-xl-6 business marketing">
+								<div class="top_courses home14">
+									<div class="thumb">
+										<img class="img-whp" src="{% static 'images/courses/t2.jpg' %}" alt="t2.jpg">
+										<div class="overlay">
+											
+											
+											<a class="tc_preview_course" href="#">Preview Course</a>
+										</div>
+									</div>
+									<div class="details">
+										<div class="tc_content">
+											<p>Ali TUFAN</p>
+											<h5>Designing a Responsive Mobile Website with Muse</h5>
+											
+										</div>
+										<div class="tc_footer">
+											<ul class="tc_meta float-left">
+												<li class="list-inline-item"><a href="#"><i class="flaticon-profile"></i></a></li>
+												<li class="list-inline-item"><a href="#">1st year</a></li>
+												<li class="list-inline-item"><a href="#"><i class="flaticon-part"></i></a></li>
+												<li class="list-inline-item"><a href="#">computer</a></li>
+											</ul>
+											
+										</div>
+									</div>
+								</div>
+			 				</div>
+			 				<div class="col-lg-6 col-xl-6 web design">
+								<div class="top_courses home14">
+									<div class="thumb">
+										<img class="img-whp" src="{% static 'images/courses/t3.jpg' %}" alt="t3.jpg">
+										<div class="overlay">
+											
+											
+											<a class="tc_preview_course" href="#">Preview Course</a>
+										</div>
+									</div>
+									<div class="details">
+										<div class="tc_content">
+											<p>Ali TUFAN</p>
+											<h5>Adobe XD: Prototyping Tips and Tricks</h5>
+											
+										</div>
+										<div class="tc_footer">
+											<ul class="tc_meta float-left">
+												<li class="list-inline-item"><a href="#"><i class="flaticon-profile"></i></a></li>
+												<li class="list-inline-item"><a href="#">1st year</a></li>
+												<li class="list-inline-item"><a href="#"><i class="flaticon-part"></i></a></li>
+												<li class="list-inline-item"><a href="#">computer</a></li>
+											</ul>
+											
+										</div>
+									</div>
+								</div>
+			 				</div>
+			 				<div class="col-lg-6 col-xl-6 business Web">
+								<div class="top_courses home14">
+									<div class="thumb">
+										<img class="img-whp" src="{% static 'images/courses/t4.jpg' %}" alt="t4.jpg">
+										<div class="overlay">
+											
+											
+											<a class="tc_preview_course" href="#">Preview Course</a>
+										</div>
+									</div>
+									<div class="details">
+										<div class="tc_content">
+											<p>Ali TUFAN</p>
+											<h5>Sketch: Creating Responsive SVG</h5>
+											
+										</div>
+										<div class="tc_footer">
+											<ul class="tc_meta float-left">
+												<li class="list-inline-item"><a href="#"><i class="flaticon-profile"></i></a></li>
+												<li class="list-inline-item"><a href="#">1st year</a></li>
+												<li class="list-inline-item"><a href="#"><i class="flaticon-part"></i></a></li>
+												<li class="list-inline-item"><a href="#">computer</a></li>
+											</ul>
+											
+										</div>
+									</div>
+								</div>
+			 				</div>
+			 				<div class="col-lg-6 col-xl-6 marketing">
+								<div class="top_courses home14">
+									<div class="thumb">
+										<img class="img-whp" src="{% static 'images/courses/t5.jpg' %}" alt="t5.jpg">
+										<div class="overlay">
+											
+											
+											<a class="tc_preview_course" href="#">Preview Course</a>
+										</div>
+									</div>
+									<div class="details">
+										<div class="tc_content">
+											<p>Ali TUFAN</p>
+											<h5>Design Instruments for Communication</h5>
+											
+										</div>
+										<div class="tc_footer">
+											<ul class="tc_meta float-left">
+												<li class="list-inline-item"><a href="#"><i class="flaticon-profile"></i></a></li>
+												<li class="list-inline-item"><a href="#">1st year</a></li>
+												<li class="list-inline-item"><a href="#"><i class="flaticon-part"></i></a></li>
+												<li class="list-inline-item"><a href="#">computer</a></li>
+											</ul>
+											
+										</div>
+									</div>
+								</div>
+			 				</div>
+			 				<div class="col-lg-6 col-xl-6 business marketing">
+								<div class="top_courses home14">
+									<div class="thumb">
+										<img class="img-whp" src="{% static 'images/courses/t6.jpg' %}" alt="t6.jpg">
+										<div class="overlay">
+											
+											
+											<a class="tc_preview_course" href="#">Preview Course</a>
+										</div>
+									</div>
+									<div class="details">
+										<div class="tc_content">
+											<p>Ali TUFAN</p>
+											<h5>How to be a DJ? Make Electronic Music</h5>
+											
+										</div>
+										<div class="tc_footer">
+											<ul class="tc_meta float-left">
+												<li class="list-inline-item"><a href="#"><i class="flaticon-profile"></i></a></li>
+												<li class="list-inline-item"><a href="#">1st year</a></li>
+												<li class="list-inline-item"><a href="#"><i class="flaticon-part"></i></a></li>
+												<li class="list-inline-item"><a href="#">computer</a></li>
+											</ul>
+											
+										</div>
+									</div>
+								</div>
+			 				</div>
+			 			</div>
+			 		</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Our Blog -->
+	<section class="our-blog bgc-f9">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 offset-lg-3">
+					<div class="main-title text-center">
+						<h3 class="mt0 mb0">Blog</h3>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-lg-6 col-xl-4">
+					<div class="blog_post_home6">
+						<div class="thumb">
+							<img class="img-fluid img-rounded" src="{% static 'images/blog/h11-b1.jpg' %}" alt="h11-b1.jpg">
+							<h4 class="mt0">Attract More Attention Sales And Profits</h4>
+							<a class="post_date" href="#">May 15, 2020</a>
+						</div>
+						<div class="details"></div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-6 col-xl-4">
+					<div class="blog_post_home6">
+						<div class="thumb">
+							<img class="img-fluid img-rounded" src="{% static 'images/blog/h11-b2.jpg' %}" alt="h11-b2.jpg">
+							<h4 class="mt0">11 Tips to Help You Get New Clients</h4>
+							<a class="post_date" href="#">May 15, 2020</a>
+						</div>
+						<div class="details"></div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-6 col-xl-4">
+					<div class="blog_post_home6">
+						<div class="thumb">
+							<img class="img-fluid img-rounded" src="{% static 'images/blog/h11-b3.jpg' %}" alt="h11-b3.jpg">
+							<h4 class="mt0">An Overworked Newspaper Editor</h4>
+							<a class="post_date" href="#">May 15, 2020</a>
+						</div>
+						<div class="details"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+
+	{% endblock %}

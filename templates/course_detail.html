@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+	<style>
+		.update_lecture:hover{
+			cursor: pointer;
+
+		}
+	</style>
+
+{% endblock %}
+
+{% block body %}
+
+	<!-- Home Design -->
+	<!-- Inner Page Breadcrumb -->
+	<section class="inner_page_breadcrumb style2 pb20">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1 text-center">
+					<div class="courses_single_container mt50">
+						<div class="cs_row_one">
+							<div class="cs_ins_container">
+								<h1 class="cs_title style2" id="lecture_title">{{lectures.0.title}}</h1>
+								
+					
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Top Courses -->
+	<section id="top-courses" class="blog-post pt0">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-xl-9">
+					<div class="blog_post_home6 style2 video">
+						<div class="bg_img_video_widget h500 thumb">
+							<div class="bg-video" style="background-image: url({{course.image.url}});">
+								<div class="bt-play text-center"><span class="flaticon-play-button"></span>Preview Video</div>
+							</div>
+							<div class="video-container">
+								<iframe id="video_iframe" class="w100" height="500px" src="{{lectures.0.link}}?controls=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+							</div>
+						</div>
+					</div>
+					<div class="courses_single_container">
+						<div class="cs_rwo_tabs csv2">
+							<ul class="nav nav-tabs style4 mt30" id="myTab" role="tablist">
+								<li class="nav-item">
+								    <a class="nav-link style4 active" id="Overview-tab" data-toggle="tab" href="#Overview" role="tab" aria-controls="Overview" aria-selected="true">Overview</a>
+								</li>
+								<li class="nav-item">
+								    <a class="nav-link style4" id="course-tab" data-toggle="tab" href="#course" role="tab" aria-controls="course" aria-selected="false">Course Content</a>
+								</li>
+								<li class="nav-item">
+								    <a class="nav-link style4" id="instructor-tab" data-toggle="tab" href="#instructor" role="tab" aria-controls="instructor" aria-selected="false">instructor</a>
+								</li>
+								
+							</ul>
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade show active" id="Overview" role="tabpanel" aria-labelledby="Overview-tab">
+									<div class="cs_row_two csv2">
+										<div class="cs_overview style2">
+											{{course.over_view|safe}}
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="course" role="tabpanel" aria-labelledby="review-tab">
+									<div class="cs_row_three csv2">
+										<div class="course_content style2">
+											<div class="cc_headers">
+												<h4 class="title">Course Content</h4>
+												
+											</div>
+											<br>
+											<div class="details">
+											  	<div id="accordion" class="panel-group cc_tab">
+												    <div class="panel">
+												      	<div class="panel-heading">
+													      	<h4 class="panel-title">
+													        	<a href="#panelBodyCourseStart" class="accordion-toggle link" data-toggle="collapse" data-parent="#accordion">Getting Started</a>
+													        </h4>
+												      	</div>
+													    <div id="panelBodyCourseStart" class="panel-collapse collapse show">
+													        <div class="panel-body">
+													        	<ul class="cs_list mb0">
+																	{% for lecture in lectures %}
+																		<li><a class="update_lecture" onclick='update_lecture("{{ lecture.link }}","{{ lecture.title }}")'>
+																			<span class="flaticon-play-button-1 icon"></span> 
+																			{{ lecture.title }} 
+																			<span class="cs_time"></span> 
+																			<span class="cs_preiew">Preview</span>
+																		</a></li>
+																	{% endfor %}
+													        	</ul>
+													        </div>
+													    </div>
+												    </div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="instructor" role="tabpanel" aria-labelledby="review-tab">
+									<div class="cs_row_four csv2">
+										<div class="about_ins_container style2">
+											<h4 class="aii_title">About the instructor</h4>
+											<div class="about_ins_info">
+												{% if not instructor_profile.image %}
+												<div class="thumb"><img src="{% static 'images/team/6.png' %}" alt="6.png"></div>
+												{% else %}
+												<div class="thumb"><img style="width:150px;height:150px;border-radius:100%; margin:10px" src="{{instructor_profile.image.url}}" alt="6.png"></div>
+												{% endif %}
+											</div>
+											<div class="details">
+												
+												
+												<h4>{{instructor_profile.name}}</h4>
+												<p>{{instructor_profile.bio}}</p>
+												<ul class="about_ins_list mb0">
+													{% if instructor.skill %}
+													<li><p>Skills :</p></li>
+													<!--loop in skills in instructor table -->
+													{% for skill in instructor_profile.skills.all %}	
+													<li><a href="#">{{skill.skill}}</a></li>
+													{% endfor %}
+													{% endif %}
+													
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-xl-3 pl-lg-0 pr-lg-0">
+					<div class="sidebar_course_widget style2">
+						<div class="course_list_details">
+							<div class="price_title df"> <h1> Course details </h1></div>
+							<ul class="icon-box-list mt20 mb0">
+								<li><span class="fwb fz15 icon flaticon-resume"></span> <span class="fwb fz15 pl10 title">Course name</span> <span class="para"> {{course.title}}</span></li>
+								<li><span class="fwb fz15 icon flaticon-clock"></span> <span class="fwb fz15 pl10 title">Duration</span> <span class="para"> {{course.duration}}</span></li>
+								<li><span class="fwb fz15 icon flaticon-creative-idea"></span> <span class="fwb fz15 pl10 title">SKILL LEVEL</span> <span class="para"> {{course.skill_level}}</span></li>
+								<li><span class="fwb fz15 icon flaticon-ebook"></span> <span class="fwb fz15 pl10 title">Grade</span> <span class="para"> {{course.grade}}</span></li>
+								<li><span class="fwb fz15 icon flaticon-account"></span> <span class="fwb fz15 pl10 title">Department</span> <span class="para">{{course.department}}</span></li>
+								<li><span class="fwb fz15 icon flaticon-account"></span> <span class="fwb fz15 pl10 title">insturctor</span> <span class="para">{{course.instructor}}</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{% block script %}
+	<script>
+		function update_lecture(link,title){
+			// get the iframe element by id
+			var iframe = document.getElementById('video_iframe');
+			// set the src attribute to the value of the link
+			iframe.src=link+"?controls=0";
+			// set the title of the lecture
+			document.getElementById('lecture_title').innerHTML = title;
+			console.log(title);
+		}
+	</script>
+	{% endblock %}
+
+
+	{% endblock %}
